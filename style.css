@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --fs-h1-aside: 4.8rem;
+    --fs-h1-figure: 1.5rem;
+    --fs-p-mobile: 1.3rem;
+    --fs-p-desktop: 1.5rem;
+    --fs-footer: 1.8rem;
+
+    --ff-h1-aside: 'Staatliches', sans-serif;
+    --ff-h1-figure: 'Palanquin', sans-serif;
+    --ff-p-aside: 'Roboto', sans-serif;
+    --ff-text: 'Palanquin', sans-serif;
+    --ff-footer:'Open Sans', sans-serif;
+
+    --bgc-body: hsl(0, 0%, 90%);
+    --bgc-page: hsl(233, 100%, 100%);
+    --bgc-aside: hsl(218, 17%, 62%);
+    --bgc-asideh1: hsl(275, 18%, 79%);
+    --bgc-main: hsl(233, 100%, 97%);
+    --bgc-card: hsl(312, 91%, 96%);
+
+    --color-h1-aside: hsl(232, 17%, 100%);
+    --color-h1-figure: hsl(0, 11%, 49%);
+    --color-p-desktop: hsl(0, 0%, 100%, 1);
+    --color-p-mobile: hsl(274, 84%, 12%);
+    --color-footer: hsl(232, 17%, 54%);
+}
+
+body {
+    background-color: var(--bgc-body);
+    height: 100vh;
+    width: 100vw;
+}
+
+.page {
+    background-color: var(--bgc-page);
+    /* border: solid rgb(192, 215, 107) 1px; */
+    display: grid;
+    grid-template-areas: "A B";
+
+    /* height: 72rem; */
+    /* padding: 2rem; */
+
+    position: relative;
+    width: 128rem;
+}
+
+aside {
+    background-color: var(--bgc-aside);
+    /* border: solid blue 1px; */
+    min-height: 100%;
+    width: 35rem;
+    text-align: center;
+}
+
+main {
+    /* border: solid rgb(240, 37, 219) 1px; */
+    display: inline-block;
+    min-height: 100%;
+    min-width: 100%;
+    width: 93rem;
+    /* position: absolute; */
+}
+.logo {
+    height: 23rem;
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.logo svg {
+    background-size: 50%;
+}
+
+aside h1 {
+    background-color: #cbc0d3;
+
+    color: var(--color-h1-aside);
+    font-family: var(--ff-h1-aside);
+    font-size: var(--fs-h1-aside);
+    font-weight: 400;
+
+    height: 7rem;
+
+    letter-spacing: 0.05em;
+    line-height: 3.4rem;
+
+    padding: 1.7rem 0;
+
+    text-transform: uppercase;
+    text-shadow: 0.2rem 0.2rem 0.3rem hsl(278deg 17% 62%);
+}
+
+aside .p-desktop {
+    color: var(--color-p-desktop);
+    font-family: var(--ff-p-aside);
+    font-size: var(--fs-p-desktop);
+    font-weight: 400;
+
+    height: 25rem;
+
+    letter-spacing: 0.05em;
+    line-height: 2rem;
+
+    padding: 3rem;
+
+    text-shadow: 0.2rem 0.2rem 0.3rem hsl(278deg 17% 62%);
+}
+/* GRACE - section */
+/* section {
+    width: 100%;
+    display: grid;
+    gap: 3.2rem;     	
+    grid-template-areas:
+    "A B C"
+    "D E F";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15rem;
+    margin: 6.5rem 8rem 12rem 10rem;
+
+    position: relative;
+} */
+
+section {
+    /* border: solid rgb(200, 255, 0) 2px; */
+
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "A B C" "D E F";
+    grid-template-rows: 15rem;
+
+    justify-items: center;
+    /* justify-items: center alinha os itens da section na horizontal ao centro*/
+    margin: 4rem;
+    text-align: center;
+
+    /* align-items: center; Alinha o box no centro do grid */
+}
+
+figure h1 {
+    background-color: var(--bgc-asideh1);
+    border: solid 1px var(--bgc-aside);
+    border-radius: 1rem;
+    color: var(--color-h1-figure);
+    font-size: var(--fs-h1-figure);
+    font-family: var(--ff-h1-figure);
+    margin-left: 11.5rem;
+    font-weight: 700;
+
+}
+
+section figure:nth-child(1) {
+    background-image: url('https://media.istockphoto.com/photos/strawberry-ice-cream-with-fresh-strawberries-picture-id1264447431?b=1&k=20&m=1264447431&s=170667a&w=0&h=fW81PeKgMWeXcEU3Ww7kYXjcZFt_ZyODJ6132TOYlRg=');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-area: A;
+}
+
+section figure:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGljZSUyMGNyZWFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+    background-position: 35% 68%;
+    background-repeat: no-repeat;
+    background-size: 157%;
+
+    grid-area: B;
+
+}
+
+section figure:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1623595119708-26b1f7300075?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aWNlJTIwY3JlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60');
+    background-position: 53% 3%;
+    background-repeat: no-repeat;
+    background-size: 101% 155%;
+
+    grid-area: C;
+}
+
+section figure:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1622090860720-c4a77e146284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGljZSUyMGNyZWFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-area: D;
+}
+
+section figure:nth-child(5) {
+    background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGljZSUyMGNyZWFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+    background-position: 59% 67%;
+    background-repeat: no-repeat;
+    background-size: 101% 146%;
+
+    grid-area: E;
+    margin-top: 20rem;
+}
+
+section figure:nth-child(6) {
+    background-image: url('https://images.unsplash.com/photo-1556682851-c4580670113a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGljZSUyMGNyZWFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+    background-position: 53% 98%;
+    background-repeat: no-repeat;
+    background-size: 196% 143%;
+
+    grid-area: F;
+}
+
+.card-small {
+    /* border: solid blue 1px; */
+    width: 220px; 
+    height: 150px;
+    border-radius: 1.5rem;
+}
+
+.card-small h1 {
+    margin-top: 10.5rem;
+}
+
+.card-big {
+    /* border: solid rgb(26, 100, 38) 1px; */
+    width: 220px; 
+    height: 350px;
+    border-radius: 1.5rem;
+}
+
+.card-big h1 {
+    margin-top: 30.5rem;
+}
+
+footer {
+    /* border: solid rgb(83, 217, 235) 2px; */
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    bottom: 0;
+
+}
+
+footer p {
+    /* border: solid rgb(207, 35, 179) 1px; */
+    color: var(--color-footer);
+    font-size: var(--fs-footer);
+    font-family: var(--ff-footer);
+
+    margin: 2rem auto;
+}
+
+footer span {
+    font-weight: 700;
+}
